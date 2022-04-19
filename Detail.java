@@ -1,36 +1,34 @@
 import java.util.Scanner;
 
-public class Detail {
-
+public class Detail
+{
     public static void main(String[] args)
     {
-
-        saisie();
-    }
-
-    public static void saisie()
-    {
-
         Scanner sc = new Scanner(System.in);
 
-        System.out.println(" nom : ");
-        String nom = sc.next();
-        System.out.println(" prénom : ");
-        String prenom = sc.next();
-        System.out.println("Veuillez saisir l'adresse : ");
-        String adresse = sc.next();
-        System.out.println("Veuillez saisir la date de naissance : ");
-        String datedenaissance = sc.next();
-        System.out.println(" lieu de naissance : ");
-        String lieudenaissance = sc.next();
-        System.out.println(" numéro de téléphone : ");
-        int telephone = sc.nextInt();
+        String [] tableau = new String[6];
 
-        System.out.println("La personne s'appelle " + prenom + nom + ", elle habite a " + adresse + ". Elle est née le " + datedenaissance + " a " + lieudenaissance + "et son numéro de téléphone est : " + telephone);
+        System.out.println("Quel est votre nom ?");
+        tableau[0] = sc.nextLine();
 
-        
+        System.out.println("Quel est votre prénom ?");
+        tableau[1] = sc.nextLine();
+
+        System.out.println("Quel est votre adresse ?");
+        tableau[2] = sc.nextLine();
+
+        System.out.println("Quel est votre date de naissance ?");
+        tableau[3] = sc.nextLine();
+
+        System.out.println("Quel est votre lieu de naissance ?");
+        tableau[4] = sc.nextLine();
+
+        System.out.println("Quel est votre numéro de téléphone ?");
+        tableau[5] = sc.nextLine();
+
+        for(int i = 0; i < tableau.length; i++)
+        {
+            System.out.println(tableau[i]);
+        }
     }
-
-    
-    
 }
